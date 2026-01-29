@@ -7,16 +7,50 @@
     --text-primary: #333333;
     --text-filter: #6a7282;
     --text-placeholder: #a9a9a9;
+    --text-input: #000000;
+
+    --btn-bg: #000000;
+    --btn-text: #ffffff;
+
+    --card-bg: #ffffff;
+    --card-text: #333333;
+    --card-icon: #333333;
+    --accent: #000000;
 
     --neutral-white: #ffffff;
     --neutral-black: #000000;
 }
 
+.dark-mode {
+    --bg-primary: #212121;
+    --bg-input: #303030;
+    
+    --text-primary: #ffffff;
+    --text-filter: #6a7282;
+    --text-placeholder: #a9a9a9;
+    --text-input: #ffffff;
+
+    --btn-bg: #ffffff;
+    --btn-text: #000000;
+
+    --card-bg: #303030;
+    --card-text: #ffffff;
+    --card-icon: #ffffff;
+    --accent: #ffffff;
+
+    --neutral-white: #ffffff;
+    --neutral-black: #000000;
+}
+
+.dark-mode img {
+    filter: invert(1) brightness(1.2);
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Lato", sans-serif; }
 
 body { 
-    background: var(--bg-primary); 
-    transition: 0.3s;
+    background: var(--bg-primary);
+    transition: 0.3s ease;
 }
 
 header {
@@ -27,6 +61,7 @@ header {
 
 header i {
     position: absolute;
+    color: var(--text-primary);
     font-size: 48px;
     top: 29px;
     right: 45px;
@@ -47,6 +82,8 @@ h1 {
 
 #task-input {
     width: 80%;
+    background: var(--bg-input);
+    color: var(--text-input);
     padding: 14px 25px;
     border: none;
     border-radius: 8px;
@@ -71,13 +108,12 @@ h1 {
     padding: 14px 20px;
     font-weight: bold;
     font-size: 15px;
-    background: var(--neutral-black);
-    color: var(--neutral-white);
+    background: var(--btn-bg);
+    color: var(--btn-text);
     border: none;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.24);
     cursor: pointer;
-    transition: 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,11 +157,12 @@ span {
 }
 
 ul { 
-    list-style: none; 
+    list-style: none;
 }
 
 li {
-    background: var(--neutral-white);
+    background: var(--card-bg);
+    color: var(--card-text);
     padding: 20px 25px;
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.24);
@@ -136,7 +173,7 @@ li {
 }
 
 .task-checkbox {
-    accent-color: var(--neutral-black); 
+    accent-color: var(--accent); 
 }
 
 .completed {
@@ -146,12 +183,19 @@ li {
 
 li i { 
     margin-left: auto; 
+    color: var(--card-icon);
     cursor: pointer; 
 }
 
 @media (max-width: 540px) {
     main {
         padding: 0 16px;
+    }
+
+    header i {
+        font-size: 41px;
+        top: 22px;
+        right: 22px;
     }
 
     h1 {

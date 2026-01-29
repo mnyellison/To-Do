@@ -2,7 +2,36 @@ const input = document.getElementById('task-input');
 const btn = document.querySelector('.btn-create');
 const ul = document.querySelector('ul');
 const clipboard = document.querySelector('.clipboard');
+const body = document.querySelector('body');
+const moon = document.querySelector('.bx-moon');
 
+// lógica do dark mode
+const html = document.documentElement;
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+let userInteractedWithTheme = false;
+
+const syncTheme = (isDark) => {
+    html.classList.toggle('dark-mode', isDark);
+    body.classList.toggle('dark-mode', isDark);
+    moon.classList.toggle('bx-sun', isDark);
+};
+
+syncTheme(prefersDarkScheme.matches);
+
+moon.addEventListener('click', () => {
+    userInteractedWithTheme = true;
+    const isDark = body.classList.toggle('dark-mode');
+    syncTheme(isDark);
+});
+
+prefersDarkScheme.addEventListener('change', (e) => {
+     if (!userInteractedWithTheme) {
+        syncTheme(e.matches);
+    }
+});
+
+// lógica das tarefas
 const createTask = () => {
     const task = input.value.trim();
     if (task === '') return
