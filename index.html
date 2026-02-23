@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <header>
+        <h1 class="title">Minhas tarefas</h1>
+    </header>
+
+    <main>
+        <section class="task-creator">
+            <input type="text" id="task-creation-box" placeholder="Digite sua tarefa aqui">
+
+                <button type="button" class="btn-task-creator">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Criar</span>
+                </button>
+        </section>
+
+        <section class="empty-state"> <!-- hidden -->
+            <p>Você ainda não tem tarefas cadastradas.</p>
+            <p>Crie tarefas agora mesmo.</p>
+        </section>
+
+        <section class="task-list-section">
+            <ul class="task-list">
+                <li>
+                    <input type="checkbox">
+                    <span>Leitura</span>
+                    <button class="btn-delete">
+                        <i class="fa-regular fa-trash-can"></i>
+                    </button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal-overlay hidden">
+        <div class="modal">
+            <h2>Deseja excluir esta tarefa?</h2>
+
+            <div class="modal-actions">
+                <button class="btn-cancel">Cancelar</button>
+                <button class="btn-confirm">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
