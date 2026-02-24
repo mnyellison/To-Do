@@ -131,11 +131,15 @@ main {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.35);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(4px);
     animation: fadeIn 0.2s ease;
+}
+
+.modal-overlay.active {
+    display: flex;
 }
 
 .modal {
