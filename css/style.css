@@ -145,25 +145,26 @@ main {
 .modal {
     background-color: var(--black);
     color: var(--white);
-    padding: 28px;
+    padding: 22px 28px;
     border-radius: 16px;
     width: 90%;
     max-width: 380px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 16px;
     animation: popIn 0.2s ease;
 }
 
 .modal h2 {
     font-size: var(--fs-lg);
     font-weight: var(--font-weight-semibold);
+    margin-bottom: 8px;
 }
 
 .modal p {
     font-size: var(--fs-sm);
     opacity: 0.7;
+    margin-bottom: 16px;
 }
 
 .modal-actions {
