@@ -1,0 +1,47 @@
+:root {
+
+    /* =========================
+    COLORS - BASE
+    ========================== */
+
+    --white: #ffffff;
+    --black: #000000;
+
+    --gray-100: #f3f4f6;
+    --gray-500: #a9a9a9;
+    --gray-600: #6a7282;
+    --gray-700: #333333;
+
+
+    /* =========================
+    TYPOGRAPHY
+    ========================== */
+
+    --font-primary: 'Inter', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+
+    /* =========================
+    FONT SIZES
+    ========================== */
+
+    --fs-xs: 0.75rem;   /* 12px */
+    --fs-sm: 0.875rem;  /* 14px */
+    --fs-md: 1rem;      /* 16px */
+    --fs-lg: 1.25rem;   /* 20px */
+    --fs-xl: 1.5rem;    /* 24px */
+    --fs-2xl: 2rem;     /* 32px */
+
+
+    /* =========================
+    BOX-SHADOW
+    ========================== */
+
+    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.24);
+
+}
