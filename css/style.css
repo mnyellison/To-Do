@@ -219,15 +219,6 @@ main {
     transform: scale(0.97);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @keyframes popIn {
     from {
         opacity: 0;
