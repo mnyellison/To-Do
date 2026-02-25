@@ -229,3 +229,28 @@ main {
         transform: scale(1);
     }
 }
+
+@media (min-width: 768px) {
+    .title {
+        padding: 20px 50px;
+    }
+    
+    main {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .task-creator {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #task-creation-box {
+        width: 100%;
+    }
+
+    .btn-task-creator {
+        width: 20%;
+    }
+}
