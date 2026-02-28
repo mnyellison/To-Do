@@ -47,15 +47,12 @@ main {
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
     height: 45px;
+    outline: none;
 }
 
 #task-creation-box::placeholder {
     font-size: var(--fs-md);
     color: var(--gray-500);
-}
-
-#task-creation-box:focus {
-    outline-color: var(--black);
 }
 
 .btn-task-creator {
