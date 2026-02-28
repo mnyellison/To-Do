@@ -54,6 +54,10 @@ main {
     color: var(--gray-500);
 }
 
+#task-creation-box:focus {
+    outline-color: var(--black);
+}
+
 .btn-task-creator {
     background-color: var(--black);
     color: var(--white);
